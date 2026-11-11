@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f7ff;
+    color: #292344;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 22px;
+    color: #292344;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ec4899;
+}
+
+/* Hero section */
+.hero {
+    min-height: 580px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 10%;
+    gap: 40px;
+    background: linear-gradient(
+        120deg,
+        #ede9fe,
+        #fce7f3,
+        #dbeafe
+    );
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tag {
+    color: #9333ea;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #9333ea;
+}
+
+.hero h2 {
+    color: #db2777;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 9px solid white;
+    box-shadow: 0 10px 35px rgba(124,58,237,0.25);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg,#9333ea,#ec4899);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 5px 20px #d8b4fe;
+}
+
+/* Common sections */
+section:not(.hero) {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+section h2 span {
+    color: #9333ea;
+}
+
+/* About */
+.about {
+    background: white;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 2;
+    font-size: 17px;
+}
+
+/* Skills */
+.skills {
+    background: #f3e8ff;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.skill-card {
+    width: 150px;
+    padding: 30px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.html { background: #f97316; }
+.css { background: #2563eb; }
+.js { background: #eab308; }
+.python { background: #16a34a; }
+.java { background: #db2777; }
+.db { background: #7c3aed; }
+
+/* Projects */
+.projects {
+    background: white;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    background: #f8f7ff;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-bottom: 5px solid #9333ea;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(147,51,234,0.2);
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #9333ea;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+/* Contact */
+.contact {
+    background: linear-gradient(120deg,#ede9fe,#fce7f3);
+}
+
+.contact p {
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #292344;
+    color: white;
+}
+
+/* Mobile responsive */
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    section:not(.hero) {
+        padding: 55px 6%;
+    }
+}
